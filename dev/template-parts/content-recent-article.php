@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying the most recent post
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -18,7 +18,6 @@
 			<div class="entry-meta">
 				<?php
 					wprig_posted_on();
-					wprig_comments_link();
 				?>
 			</div><!-- .entry-meta -->
 			<?php
@@ -41,24 +40,6 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php
-		wprig_post_categories();
-		?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post--->
 
-<?php
-if ( is_singular() ) :
-	the_post_navigation(
-		array(
-			'prev_text' => '<div class="post-navigation-sub"><span>' . esc_html__( 'Previous:', 'wprig' ) . '</span></div>%title',
-			'next_text' => '<div class="post-navigation-sub"><span>' . esc_html__( 'Next:', 'wprig' ) . '</span></div>%title',
-		)
-	);
 
-	// If comments are open or we have at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) :
-		comments_template();
-	endif;
-endif;

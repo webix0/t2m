@@ -20,14 +20,9 @@ wp_print_styles( array( 'wprig-content', 'wprig-front-page' ) ); // Note: If thi
 	<main id="primary" class="site-main">
 
 		<?php
-		while ( have_posts() ) :
-			the_post();
+		get_template_part( 'template-parts/content-recent-article', get_post_type() );
 
-			get_template_part( 'template-parts/content-excerpts', get_post_type() );
-
-		endwhile; // End of the loop.
 		?>
-		<?php the_posts_navigation(); ?>
 
 	</main><!-- #primary -->
 
