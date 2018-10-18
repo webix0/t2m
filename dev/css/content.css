@@ -1016,4 +1016,58 @@ object {
 	margin: 0 2em;
 	font-size: 1.2em; }
 
+/*--------------------------------------------------------------
+### Recent Post  content-recent-article.php
+--------------------------------------------------------------*/
+.rpwe-block img {
+	width: 80px;
+	height: 45px;
+	display: inline;
+	float: left;
+	border: 1px solid #EEE !important;
+	box-shadow: none !important;
+	margin: 2px 10px 2px 0;
+	padding: 3px !important; }
+
+.recent-post-widget .rpwe-title {
+	font-size: 1.17em; }
+	.recent-post-widget .rpwe-title a {
+		color: white; }
+
+.recent-post-widget ul li:nth-child(1) {
+	color: white;
+	background-color: var(--rust); }
+
+.recent-post-widget ul li:nth-child(2) {
+	background-color: var(--orange); }
+
+.recent-post-widget ul li:nth-child(3) {
+	background-color: var(--turquoise); }
+
+.recent-post-widget ul li:nth-child(4) {
+	color: white;
+	background-color: var(--red); }
+
+.recent-post-widget ul li:nth-child(5) {
+	color: white;
+	background-color: var(--blue); }
+
+.recent-post-widget ul li:nth-child(6) {
+	color: white;
+	background-color: var(--purple); }
+
+.recent-post-widget ul li:nth-child(7) {
+	background-color: var(--turquoise); }
+
+.recent-post-widget ul li:nth-child(8) {
+	background-color: var(--light-blue); }
+
+.recent-post-widget ul li:nth-child(9) {
+	color: white;
+	background-color: var(--rust); }
+
+.recent-post-widget ul li:nth-child(10) {
+	color: white;
+	background-color: var(--red); }
+
 /*# sourceMappingURL=../../maps/dev/css/content.css.map */

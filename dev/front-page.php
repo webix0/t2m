@@ -22,6 +22,7 @@ wp_print_styles( array( 'wprig-content', 'wprig-front-page' ) ); // Note: If thi
 		<?php
 		get_template_part( 'template-parts/content-recent-article', get_post_type() );
 
+		dynamic_sidebar( 'recent-articles-widget' );
 		?>
 
 	</main><!-- #primary -->

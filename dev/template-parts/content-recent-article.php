@@ -38,6 +38,7 @@
 			)
 		);
 		?>
+		<a id="readmore-bubble" class="readmore-bubble" href="<?php echo get_permalink(); ?>" alt="Read More about this article"></a>
 	</div><!-- .entry-content -->
 
 </article><!-- #post--->
