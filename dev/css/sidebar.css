@@ -1,0 +1,14 @@
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+
+.primary-sidebar {
+	padding: 1.5rem;
+	font-family: var(--Raleway);
+}
+
+@media (--sidebar-query) {
+	.primary-sidebar {
+		padding: 0;
+	}
+}
