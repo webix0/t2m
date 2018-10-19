@@ -1017,8 +1017,73 @@ object {
 	font-size: 1.2em; }
 
 /*--------------------------------------------------------------
-### Recent Post  content-recent-article.php
+### Recent Post Widget
 --------------------------------------------------------------*/
+.rpwe-block ul {
+	list-style: none !important;
+	margin-left: 0 !important;
+	padding-left: 0 !important; }
+
+.rpwe-block li {
+	list-style-type: none; }
+
+.rpwe-block a {
+	display: inline;
+	text-decoration: none; }
+
+.rpwe-block h3 {
+	background: none !important;
+	clear: none;
+	margin-bottom: 0 !important;
+	margin-top: 0 !important;
+	font-weight: 400;
+	line-height: 1.5em; }
+
+.rpwe-block h3 a {
+	color: white; }
+
+.rpwe-thumb {
+	border: 1px solid #eee !important;
+	box-shadow: none !important;
+	margin: 2px 10px 2px 0;
+	padding: 3px !important; }
+
+.rpwe-summary {
+	font-size: 1em; }
+
+.rpwe-time {
+	color: #bbb;
+	font-size: 11px; }
+
+.rpwe-comment {
+	color: #bbb;
+	font-size: 11px;
+	padding-left: 5px; }
+
+.rpwe-alignleft {
+	display: inline;
+	float: left; }
+
+.rpwe-alignright {
+	display: inline;
+	float: right; }
+
+.rpwe-aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto; }
+
+.rpwe-clearfix:before,
+.rpwe-clearfix:after {
+	content: "";
+	display: table !important; }
+
+.rpwe-clearfix:after {
+	clear: both; }
+
+.rpwe-clearfix {
+	zoom: 1; }
+
 .rpwe-block img {
 	width: 80px;
 	height: 45px;
@@ -1031,43 +1096,66 @@ object {
 
 .recent-post-widget .rpwe-title {
 	font-size: 1.17em; }
-	.recent-post-widget .rpwe-title a {
-		color: white; }
+	.recent-post-widget .rpwe-title h3 a {
+		color: #ececec; }
+
+.recent-post-widget .rpwe-summary {
+	font-size: 1em;
+	margin: 1em 1em 1em 2em; }
+	.recent-post-widget .rpwe-summary .more-link {
+		float: right;
+		width: 200px;
+		height: 36px;
+		margin: 1em -1em 0;
+		transform: scale(0.8);
+		background: url(/t2m/wp-content/uploads/Learn-More-Tie.png) no-repeat; }
+
+.recent-post-widget ul li {
+	color: white;
+	padding: 1.5em; }
 
 .recent-post-widget ul li:nth-child(1) {
-	color: white;
 	background-color: var(--rust); }
 
 .recent-post-widget ul li:nth-child(2) {
+	color: #000;
 	background-color: var(--orange); }
+	.recent-post-widget ul li:nth-child(2) h3 a {
+		color: #000; }
 
 .recent-post-widget ul li:nth-child(3) {
-	background-color: var(--turquoise); }
+	background-color: var(--blue); }
 
 .recent-post-widget ul li:nth-child(4) {
-	color: white;
 	background-color: var(--red); }
 
 .recent-post-widget ul li:nth-child(5) {
-	color: white;
-	background-color: var(--blue); }
+	color: #000;
+	background-color: var(--turquoise); }
+	.recent-post-widget ul li:nth-child(5) h3 a {
+		color: #000; }
 
 .recent-post-widget ul li:nth-child(6) {
-	color: white;
-	background-color: var(--purple); }
+	color: #000;
+	background-color: var(--orange); }
+	.recent-post-widget ul li:nth-child(6) h3 a {
+		color: #000; }
 
 .recent-post-widget ul li:nth-child(7) {
-	background-color: var(--turquoise); }
+	background-color: var(--purple); }
 
 .recent-post-widget ul li:nth-child(8) {
 	background-color: var(--light-blue); }
 
 .recent-post-widget ul li:nth-child(9) {
-	color: white;
 	background-color: var(--rust); }
 
 .recent-post-widget ul li:nth-child(10) {
-	color: white;
 	background-color: var(--red); }
+
+.recent-sidebar .rpwe-title {
+	font-size: 1.17em; }
+	.recent-sidebar .rpwe-title a {
+		color: black; }
 
 /*# sourceMappingURL=../../maps/dev/css/content.css.map */

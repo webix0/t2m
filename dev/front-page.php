@@ -24,7 +24,7 @@ wp_print_styles( array( 'wprig-content', 'wprig-front-page' ) ); // Note: If thi
 
 		dynamic_sidebar( 'recent-articles-widget' );
 		?>
-
+		<a href="<?php echo get_page_link(1971); ?>">Full List of Articles</a>
 	</main><!-- #primary -->
 
 <?php
