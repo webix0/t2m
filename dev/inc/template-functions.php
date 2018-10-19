@@ -118,6 +118,7 @@ function wprig_add_body_style() {
 		$preloads['wprig-front-page'] = wprig_get_preload_stylesheet_uri( $wp_styles, 'wprig-front-page' );
 	}
 
+
 	// Output the preload markup in <head>.
 	foreach ( $preloads as $handle => $src ) {
 		echo '<link rel="preload" id="' . esc_attr( $handle ) . '-preload" href="' . esc_url( $src ) . '" as="style" />';

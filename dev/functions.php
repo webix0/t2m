@@ -373,6 +373,7 @@ function wprig_styles() {
 	wp_register_style( 'wprig-sidebar', get_theme_file_uri( '/css/sidebar.css' ), array(), '20180514' );
 	wp_register_style( 'wprig-widgets', get_theme_file_uri( '/css/widgets.css' ), array(), '20180514' );
 	wp_register_style( 'wprig-front-page', get_theme_file_uri( '/css/front-page.css' ), array(), '20180514' );
+	wp_register_style( 'wprig-archive', get_theme_file_uri( '/css/archive.css' ), array(), '20181019' );
 }
 add_action( 'wp_enqueue_scripts', 'wprig_styles' );
 
