@@ -201,24 +201,38 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<section class="article-bible-refs">
+	
 		
-		<?php if( have_rows('bible_refs') ): ?>
-			
-			<h4>Article Bible References</h4>
-			<div class="line"></div>
-			<ul>
-				<?php while( have_rows('bible_refs') ): the_row(); 
-					$linky = get_sub_field('b_ref');
-					?>
-					<li class="b-refs">
-					<p> <?php echo $linky; ?> </p>
-					</li>
-				<?php endwhile; ?>
-			</ul>
-			
-		<?php endif; ?>
-	</section>
+	<?php 
+	$count = 0;
+	if( have_rows('related_audio') ): ?>
+		<section class="article-bible-refs">
+		<h4>Audio Resources</h4>
+		<div class="line"></div>
+		<ul>
+			<?php while( have_rows('related_audio') ): the_row();
+				$title = get_sub_field('track_title');
+				$linky = get_sub_field('track_url');
+				$aSource = get_sub_field('track_source');
+				?>
+				<li class="a-refs">
+					<h3><?php echo $title; ?></h3>
+					<p>Audio Source - <a href="<?php echo $aSource['url']; ?>" target="<?php echo $aSource['target']; ?>"><?php echo $aSource['title']; ?></a></p>
+					<audio id="audio-<?php echo $count; ?>" controls>
+						<source src="<?php echo $linky; ?>" type="audio/mpeg">
+						Your browser does not support this audio element.
+					</audio>
+					<script>
+						var aud = document.getElementById("audio-<?php echo $count++; ?>");
+						aud.currentTime=<?php echo get_sub_field('start_time'); ?>;
+					</script>
+				
+				</li>
+			<?php endwhile; ?>
+		</ul>
+	</section>	
+	<?php endif; ?>
+	
 
 	<section class="related-links">
 		
@@ -237,11 +251,12 @@
 		<?php endif; ?>
 	</section>
 
-	<section class="related-articles">
+	
 		
 		<?php
 			$tags = wp_get_post_tags( $post->ID );
 			if (has_tag()) { 
+				
 			$tag_ids = array();
 			foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
 			 
@@ -254,6 +269,7 @@
 			 
 			$my_query = new wp_query($args);
 			if( $my_query->have_posts() ) {?>
+			<section class="related-articles">
 				<div class="container-right">
 				<h4>Related Articles</h4>
 				<div class="line"></div> <?php
@@ -265,13 +281,29 @@
 			  
 			<?php
 			}
-			echo '</ul>';
+			echo '</ul></div></section>';
+
 			}
 			}
 			$post = $backup;
 			wp_reset_query();
 			?>
-		</div>
+		
+	<section class="related-audio">
+		
+		<?php if( have_rows('related_url_links') ): ?>
+			<h4>Article Resources</h4>
+			<div class="line"></div>
+			<ul>
+				<?php while( have_rows('related_url_links') ): the_row(); 
+					$linky = get_sub_field('link_title');
+					?>
+					<li class="links-list">
+					<a class="button" href="<?php echo $linky['url']; ?>" target="<?php echo $linky['target']; ?>"><?php echo $linky['title']; ?></a>
+					</li>
+				<?php endwhile; ?>
+			</ul>
+		<?php endif; ?>
 	</section>
 
 	<section class="related-videos">
