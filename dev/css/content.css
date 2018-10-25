@@ -107,9 +107,6 @@
 		padding-right: 0;
 		padding-left: 0; } }
 
-.post {
-	border-bottom: 1px solid #111; }
-
 /*--------------------------------------------------------------
 ## Alignments
 --------------------------------------------------------------*/
@@ -417,8 +414,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /*--------------------------------------------------------------
 ## Read More Buttons.
 --------------------------------------------------------------*/
-.readmore-bubble,
-.readless {
+.readmore-bubble {
 	position: relative;
 	float: right;
 	width: 149px;
@@ -427,31 +423,19 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	z-index: 2;
 	transition: all .5s;
 	background: url(/t2m/wp-content/uploads/2018/08/readmore-bubble.svg) no-repeat; }
-	.readmore-bubble:after,
-	.readless:after {
-		content: "Read More";
-		font-family: slackey;
-		font-size: .85em;
-		position: absolute;
-		width: 125px;
-		top: 20px;
-		left: 9px; }
-	@media (--sidebar-query) {
-		.readmore-bubble:after,
-		.readless:after {
-			font-size: 1em;
-			text-align: center; } }
+
+.readless {
+	position: relative;
+	float: right;
+	width: 106px;
+	height: 41px;
+	margin: 0 0 2em;
+	z-index: 2;
+	transition: all .5s;
+	background: url(/t2m/wp-content/uploads/2018/08/readless-bubble.svg) no-repeat; }
 
 .readmore-bubble:hover {
 	height: 68px; }
-
-.readless {
-	width: 106px;
-	height: 41px; }
-	.readless:after {
-		content: "Less";
-		top: 10px;
-		left: 18px; }
 
 .readmore-space {
 	margin-top: 160px !important;
@@ -1163,5 +1147,43 @@ object {
 --------------------------------------------------------------*/
 .articles-by-cat {
 	margin: 1em; }
+
+/*--------------------------------------------------------------
+# General Conference Section
+--------------------------------------------------------------*/
+.recent-general-conf {
+	margin: 2em 0;
+	padding: 2em 2em;
+	background-color: #FDF2EA; }
+	.recent-general-conf h2:first-child {
+		font-family: var(--global-font-family);
+		color: var(--red); }
+	.recent-general-conf .right-link {
+		font-size: 1em;
+		font-family: var(--highlight-font-family);
+		float: right;
+		text-align: right;
+		color: black;
+		text-decoration-color: var(--red); }
+	.recent-general-conf .gc-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin: 2em 0;
+		padding-bottom: 1em;
+		clear: both;
+		border-bottom: #BF3A2B solid 1px; }
+	.recent-general-conf .yt-cropped-pic img {
+		margin: 0 -11% 0 -21%;
+		clip-path: circle(34% at center); }
+	.recent-general-conf .titles {
+		margin: 0 0 0 -33%; }
+		.recent-general-conf .titles h3 a {
+			font-size: 1.3em;
+			color: black;
+			text-decoration: none; }
+		.recent-general-conf .titles h4 {
+			font-weight: 400;
+			font-style: italic;
+			margin-bottom: 0em; }
 
 /*# sourceMappingURL=../../maps/dev/css/content.css.map */

@@ -83,7 +83,7 @@ function labnolIframe( id ) {
 }
 
 function removePlayBtn() {
-    var otherElem = document.getElementById(this.dataset.id).firstChild;
+    var otherElem = document.getElementById(this.dataset.id);
     console.log(otherElem);
     this.style.display = 'none';
     var iframe = document.createElement('iframe');
@@ -94,7 +94,7 @@ function removePlayBtn() {
     otherElem.parentNode.replaceChild( iframe, otherElem );
 }
 
-// Select all links with hashes
+// Smooth Scroll - Select all links with hashes
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')

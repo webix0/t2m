@@ -38,9 +38,9 @@ get_header(); ?>
 		
 				
 			<?php
-			echo '<a href="#' . $cat->name . '"> <h2 class="' . $solidColor[$s] . '">' . $cat->name . '</h2></a>'; 
+			echo '<a href="#' . $cat->term_id . '"> <h2 class="' . $solidColor[$s] . '">' . $cat->name . '</h2></a>'; 
 			++$s;
-			if ( $s == 4 ) {
+			if ( $s == 5 ) {
 				$s = 0; 
 			}
 		} ?>
@@ -56,7 +56,7 @@ get_header(); ?>
 			// Make a header for the cateogry
 			$i = 0;
 			?>
-			<div id="<?php echo $cat->name ?>" class="cat-section">
+			<div id="<?php echo $cat->term_id ?>" class="cat-section">
 			<div class="bckg-color <?php echo $transpColor[$s] ?>"></div>
 			<div class="content">
 				

@@ -22,9 +22,21 @@ wp_print_styles( array( 'wprig-content', 'wprig-front-page' ) ); // Note: If thi
 		<?php
 		get_template_part( 'template-parts/content-recent-article', get_post_type() );
 
+		wp_print_styles( array( 'wprig-widgets' ) );
 		dynamic_sidebar( 'recent-articles-widget' );
 		?>
 		<a href="<?php echo get_page_link(1971); ?>">Full List of Articles</a>
+		<?php
+		get_template_part( 'template-parts/content-recent-g-conf', get_post_type() ); 
+		
+		dynamic_sidebar( 'cat-sqs' );
+
+		get_template_part( 'template-parts/content-single-g-conf', get_post_type() ); 
+		?>
+
+
+		
+
 	</main><!-- #primary -->
 
 <?php

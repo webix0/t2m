@@ -1,6 +1,9 @@
 /**
  * Custom styles for the front-page.php template.
  */
+.home .post-thumbnail img {
+	margin-bottom: 1em; }
+
 @media (--sidebar-query) {
 	.site {
 		margin: 0 1em;
