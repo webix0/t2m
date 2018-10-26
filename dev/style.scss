@@ -779,6 +779,10 @@ textarea {
 
 .site-branding {
 	padding-bottom: .3em;
+	@media (--sidebar-query) {
+		padding-bottom: 0;
+		margin: -1em;
+	}
 }
 .site-title-clickable a {
 	width: 70%;

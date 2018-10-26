@@ -87,7 +87,7 @@ get_header(); ?>
 
 			<?php endwhile; endif; // done our wordpress loop. Will start again for each category 
 			++$s;
-			if ( $s == 4 ) {
+			if ( $s == 5 ) {
 				$s = 0; 
 			}
 			if ( $i > 3 ) { 

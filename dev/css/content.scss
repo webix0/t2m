@@ -515,7 +515,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 .hide-article {
 	position: absolute;
-	height: 135px;
+	height: 95px;
 	width: calc(82% - 68px);
 	overflow: hidden;
 	&:after {
@@ -1371,7 +1371,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-# General Conference Section
+# General Conference Section List
 --------------------------------------------------------------*/
 
 .recent-general-conf {
@@ -1387,6 +1387,7 @@ object {
 		font-family: var(--highlight-font-family);
 		float: right;
 		text-align: right;
+		margin-bottom: 2em;
 		color: black;
 		text-decoration-color: var(--red);
 	}
@@ -1418,3 +1419,77 @@ object {
 		}
 	}
 }
+
+
+/*--------------------------------------------------------------
+# General Conference single article preview
+--------------------------------------------------------------*/
+
+.recent-general-conf {
+	.gc-titles h3 {
+		text-align: center;
+		a {
+		color: #000;
+		text-decoration: none;
+		}
+	}
+}
+@supports (display: grid) {
+	.recent-general-conf.d-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr;
+		background-color: transparent;
+	}
+	.bckg-color {
+		grid-column: 1 / 1;
+		grid-row: 1 / 2;
+		margin-right: 0px;
+		margin-left: -2em;
+		background-color: #FDF2EA;
+		transition: all .5s;
+		animation: bck-r-t-l 2s ease-out;
+	}
+	@keyframes bck-r-t-l {
+		from {margin-right: 50px}
+		to {margin-right: 0px}
+	}
+	.content {
+		grid-column: 1 / 5;
+		grid-row: 1 / 2;
+	}
+}
+
+
+.thin {
+    font-family: raleway;
+    font-size: .9em;
+	margin-top: 2em;
+}
+
+/*--------------------------------------------------------------
+# Social Media
+--------------------------------------------------------------*/
+
+.social-media {
+	display: flex;
+	align-content: center;
+	margin: 1em;
+	h1 {
+		text-align: center;
+		font-size: 1.8em;
+	}
+	img {
+		width: 100%;
+		max-width: 280px;
+	}
+}
+
+.s-m-icons {
+	margin-left: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-around;
+}
+
+

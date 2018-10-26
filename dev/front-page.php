@@ -32,6 +32,8 @@ wp_print_styles( array( 'wprig-content', 'wprig-front-page' ) ); // Note: If thi
 		dynamic_sidebar( 'cat-sqs' );
 
 		get_template_part( 'template-parts/content-single-g-conf', get_post_type() ); 
+
+		get_template_part( 'template-parts/content-social-media', get_post_type() );
 		?>
 
 

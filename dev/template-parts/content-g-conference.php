@@ -61,7 +61,7 @@ wp_print_styles( array( 'wprig-content' ) );
 				<?php echo get_field('LDS_Message_summary');
 			}
 			if( get_field('lds_website_link') ){ 
-				 echo '<div class="gc-LDS-link"><a href="' . get_field('lds_website_link') . '">' . 'Learn More on</a>';?>
+				 echo '<div class="gc-LDS-link"><a href="' . get_field('lds_website_link') . '">' . 'Read More on</a>';?>
 				<h6>LDS.org</h6>
 			</div> <!-- End of LDS-link -->
 				<?php
@@ -163,20 +163,23 @@ wp_print_styles( array( 'wprig-content' ) );
 				$my_query = new wp_query($args);
 				if( $my_query->have_posts() ) {?>
 					<div class="general-c-latest">
-					<div class="container-right">
-					<h4>More</h4>
-					<h3>LDS General Confernce</h3>
-					<h3>Talks Reviews</h3>
-					<div class="line"></div> <?php
-				echo '<div id="relatedposts"><ul>';
-				while ($my_query->have_posts()) {
-				$my_query->the_post();
-				?>
-				<li><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
-				
-				<?php
-				}
-				echo '</ul></div></div>';
+						<div class="container-right">
+							<h4>More</h4>
+							<h3>LDS General Confernce</h3>
+							<h3>Talks Reviews</h3>
+						<div class="line"></div>
+						<div id="relatedposts">
+							<ul>
+								<?php
+								while ($my_query->have_posts()) {
+								$my_query->the_post();
+								?>
+								<li><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li> 
+								<?php } ?>
+							</ul>
+						</div>
+					</div>
+					<?php
 				}
 				}
 				$post = $backup;

@@ -8,17 +8,19 @@
     margin: 0 0 1.5em 0;
     a {
         width: 44%;
-        text-decoration: none;   
+        text-decoration: none; 
+        display: flex;
+        justify-content: center;
         }
     h2 {
         width: 91%;
-        height: 38vw;
         margin: .5em;
+        padding: 1em .5em;
         font-size: 130%;
         text-align: center;
-        padding: 2em;
         display: flex;
         justify-content: center;
+        align-items: center;
         color: white;
         box-shadow: 0px -1px 19px 5px #999999;
     }

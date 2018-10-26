@@ -198,7 +198,6 @@
 	font-size: 11px;
 	padding-left: 5px; }
 
-.lazy-loaded,
 .rpwe-alignleft {
 	display: inline;
 	float: left; }
@@ -267,10 +266,6 @@
 		text-align: center;
 		color: white;
 		text-decoration: none; }
-
-@supports (display: grid) {
-	.DisplayCategoriesWidget .cat-sqs {
-		display: grid; } }
 
 @media screen and (min-width: 60em) {
 	.DisplayCategoriesWidget ul li {
