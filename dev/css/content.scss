@@ -331,6 +331,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	background: #000;
 	box-shadow: 0 0px 8px 0 var(--blue), 0 6px 20px 0 rgba(195, 204, 27, 0);
 	animation: boxShadowGlow 4s infinite;
+	position: sticky;
 }
 
 @keyframes boxShadowGlow {
@@ -407,8 +408,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	bottom: 0;
 	display: block;
 	left: 0;
-	margin:0 -38.885%;
-	width:177.777%;
+	margin:0 -16.7%;
+	width:133.4%;
 	max-width: unset;
 	position: absolute;
 	right: 0;
@@ -510,7 +511,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .show-article {
 	position: block;
 	height: unset;
-	width: 100%;
+	width: auto;
 	overflow: unset;
 }
 .hide-article {
@@ -587,7 +588,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		grid-template-columns: 2fr 1fr;
 	}
 }
-
+.related-audio,
+.related-videos,
 .general-c-latest,
 .related-links,
 .related-articles {
@@ -611,7 +613,15 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		}
 	}
 }
-
+.related-audio {
+	ul li {
+		margin-bottom: 2em;	
+	}
+}
+.a-refs {
+	p { font-size: .8em; margin: 0; }
+	a { font-size: .9em; }
+}
 
 .line {
 	width: 100px;
@@ -621,8 +631,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	background-color: #000;
 }
 .related-articles {
-	margin: 2em 3em 2em auto;
-    width: 100%;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-end;
@@ -634,7 +642,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		justify-self: left;
 	}
 	.container-right {
-		margin: 0 2em 0 0;
 		display: flex;
 		align-items: flex-end;
 		flex-direction: column;
@@ -839,6 +846,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		bottom: 54px;
 		left: -22px;
 		z-index: 102;
+		pointer-events: none;
 		border-radius: 54px;
 		background-image: radial-gradient(#B9E50E 26%, #88A80D);
 		cursor: pointer;
@@ -1298,6 +1306,7 @@ object {
 .recent-post-widget {
 	.rpwe-title {
 		font-size: 1.17em;
+		font-weight: 600;
 		h3 a {color: #ececec;}
 	}
 	.rpwe-summary{
@@ -1359,6 +1368,7 @@ object {
 .recent-sidebar {
 	.rpwe-title {
 		font-size: 1.17em;
+		font-weight: 600;
 		a {color: black;}
 	}
 }

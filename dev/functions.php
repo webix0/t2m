@@ -507,3 +507,5 @@ add_filter( 'single_template', function ( $template )
     // Return the template rteurned by locate_template
     return $template;
 });
+
+

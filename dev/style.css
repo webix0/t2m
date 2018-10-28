@@ -101,7 +101,7 @@ pre {
  */
 a {
 	background-color: transparent;
-	font-size: 1.2em; }
+	font-size: 1em; }
 
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -927,7 +927,16 @@ button:hover.menu-toggle {
 	padding: 0; }
 
 .main-navigation li {
-	position: relative; }
+	position: relative;
+	font-size: 2em;
+	font-weight: 600;
+	text-align: center; }
+
+@media (--wide-menu-query) {
+	.main-navigation li {
+		font-size: 1.3em;
+		font-weight: 600;
+		text-align: none; } }
 
 .main-navigation ul ul li {
 	padding-left: 1em; }

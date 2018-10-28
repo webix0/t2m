@@ -329,10 +329,22 @@ content: "";
 @media screen and (min-width: 60em) {
 	.DisplayCategoriesWidget {
 		ul li {
-			height: 145px;
+			width: 42%;
+			height: 116px;
 		}
 		li a {
-			font-size: 140%;
+			font-size: 116%;
+		}
+	}
+}
+@media screen and (min-width: 60em) {
+	.DisplayCategoriesWidget {
+		ul li {
+			width: 42%;
+			height: 116px;
+		}
+		ul li a {
+			font-size: 116%;
 		}
 	}
 }

@@ -112,7 +112,7 @@ pre {
 
 a {
 	background-color: transparent;
-	font-size: 1.2em;
+	font-size: 1em;
 }
 
 /**
@@ -1075,7 +1075,19 @@ button:hover.menu-toggle {
 
 .main-navigation li {
 	position: relative;
+	font-size: 2em;
+	font-weight: 600;
+	text-align: center;
 }
+
+@media (--wide-menu-query) {
+	.main-navigation li {
+	font-size: 1.3em;
+	font-weight: 600;
+	text-align: none;
+}
+}
+
 
 .main-navigation ul ul li {
 	padding-left: 1em;

@@ -26,7 +26,7 @@ get_header(); ?>
 		$cats = get_categories( array(
 				'orderby' => 'name',
 				'order'   => 'ASC',
-				'exclude' => '1'
+				'exclude' => '1, 8'
 			) ); 
 
 		// loop through the categries
@@ -50,11 +50,12 @@ get_header(); ?>
 	<?php
 
 		// loop through the categries
+		$s=0;
 		foreach ($cats as $cat) {
 			// setup the cateogory ID
 			$cat_id= $cat->term_id;
 			// Make a header for the cateogry
-			$i = 0;
+			
 			?>
 			<div id="<?php echo $cat->term_id ?>" class="cat-section">
 			<div class="bckg-color <?php echo $transpColor[$s] ?>"></div>
@@ -71,16 +72,15 @@ get_header(); ?>
 			if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 				<?php // create our link now that the post is setup ?>
-				<?php 
-				if ( $i == 3 ) { ?>
-					<p>More in <?php echo $cat->name ?></p>
-					<div class="display-none">
-				<?php } ?>
+				
 				<div class="article show-description">
 					<h3 class="<?php echo $titleColor[$s] ?>"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
 					<?php 
+					if ($cat->term_id == 2) {
+						echo '<a href="' . get_the_permalink() . '">' . get_the_post_thumbnail() . '</a>';
+					}
 					echo '<p>' . get_the_excerpt() . '</p>' ;
-					++$i; 
+					
 					?>
 					<a class="more-link" href="<?php the_permalink();?>"></a>
 				</div>
@@ -90,9 +90,7 @@ get_header(); ?>
 			if ( $s == 5 ) {
 				$s = 0; 
 			}
-			if ( $i > 3 ) { 
-					echo '</div>';
-			}
+			
 			echo '</div></div>'; // done class cat-section
 		} // done the foreach statement ?>
 

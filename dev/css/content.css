@@ -283,7 +283,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	max-width: 98%;
 	background: #000;
 	box-shadow: 0 0px 8px 0 var(--blue), 0 6px 20px 0 rgba(195, 204, 27, 0);
-	animation: boxShadowGlow 4s infinite; }
+	animation: boxShadowGlow 4s infinite;
+	position: sticky; }
 
 @keyframes boxShadowGlow {
 	0% {
@@ -349,8 +350,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	bottom: 0;
 	display: block;
 	left: 0;
-	margin: 0 -38.885%;
-	width: 177.777%;
+	margin: 0 -16.7%;
+	width: 133.4%;
 	max-width: unset;
 	position: absolute;
 	right: 0;
@@ -447,7 +448,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .show-article {
 	position: block;
 	height: unset;
-	width: 100%;
+	width: auto;
 	overflow: unset; }
 
 .hide-article {
@@ -513,6 +514,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		display: grid;
 		grid-template-columns: 2fr 1fr; } }
 
+.related-audio,
+.related-videos,
 .general-c-latest,
 .related-links,
 .related-articles {
@@ -520,12 +523,16 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end; }
+	.related-audio h4,
+	.related-videos h4,
 	.general-c-latest h4,
 	.related-links h4,
 	.related-articles h4 {
 		text-align: right;
 		padding-right: .5em;
 		margin-bottom: .5em; }
+	.related-audio ul,
+	.related-videos ul,
 	.general-c-latest ul,
 	.related-links ul,
 	.related-articles ul {
@@ -534,10 +541,22 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		padding-left: 0em;
 		padding-right: .5em;
 		margin: 0 0 1.5em 0; }
+		.related-audio ul li,
+		.related-videos ul li,
 		.general-c-latest ul li,
 		.related-links ul li,
 		.related-articles ul li {
 			margin: .5em 0; }
+
+.related-audio ul li {
+	margin-bottom: 2em; }
+
+.a-refs p {
+	font-size: .8em;
+	margin: 0; }
+
+.a-refs a {
+	font-size: .9em; }
 
 .line {
 	width: 100px;
@@ -547,8 +566,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	background-color: #000; }
 
 .related-articles {
-	margin: 2em 3em 2em auto;
-	width: 100%;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-end; }
@@ -559,7 +576,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		position: relative;
 		justify-self: left; }
 	.related-articles .container-right {
-		margin: 0 2em 0 0;
 		display: flex;
 		align-items: flex-end;
 		flex-direction: column; }
@@ -729,6 +745,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	bottom: 54px;
 	left: -22px;
 	z-index: 102;
+	pointer-events: none;
 	border-radius: 54px;
 	background-image: radial-gradient(#B9E50E 26%, #88A80D);
 	cursor: pointer;
@@ -1079,7 +1096,8 @@ object {
 	padding: 3px !important; }
 
 .recent-post-widget .rpwe-title {
-	font-size: 1.17em; }
+	font-size: 1.17em;
+	font-weight: 600; }
 	.recent-post-widget .rpwe-title h3 a {
 		color: #ececec; }
 
@@ -1138,7 +1156,8 @@ object {
 	background-color: var(--red); }
 
 .recent-sidebar .rpwe-title {
-	font-size: 1.17em; }
+	font-size: 1.17em;
+	font-weight: 600; }
 	.recent-sidebar .rpwe-title a {
 		color: black; }
 
