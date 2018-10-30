@@ -1226,4 +1226,14 @@ button:hover.menu-toggle {
 		width: 160px;
 		padding: 0 1em 1em 0; }
 
+.fp-articles {
+	margin: 2em;
+	padding: 2em;
+	text-align: center;
+	background-color: #0073aa;
+	border-radius: 89px; }
+	.fp-articles a {
+		color: white;
+		text-decoration: none; }
+
 /*# sourceMappingURL=../maps/dev/style.css.map */
