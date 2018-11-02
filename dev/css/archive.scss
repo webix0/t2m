@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 # Achive
 --------------------------------------------------------------*/
+
 .cat-sqs {
     display: flex;
     flex-wrap: wrap;
@@ -51,8 +52,12 @@
         height: 36px;
         margin: 1em -1em 2em;
         transform: scale(.8);
-        background: url(/t2m/wp-content/uploads/Learn-More-Tie.png) no-repeat;
+        background: url(/wp-content/uploads/Learn-More-Tie.png) no-repeat;
     }
+    img {
+        max-width: 460px;
+    }
+
     @supports (display: grid) {
         .cat-section {
             display: grid;
@@ -76,35 +81,45 @@
     background-color: var(--red);
 }
 .red50 {
-    background-color: #bf3a2b57;
+    background-color: rgba(191, 58, 43, 0.341);
 }
 .blueS {
     background-color: var(--blue);
 }
 .blue50 {
-    background-color: #2a80b947;
+    background-color: rgba(42, 128, 185, 0.278);
 }
 .orangeS {
     background-color: var(--orange);
 }
 .orange50 {
-    background-color: #ff9e0152;
+    background-color: rgba(255, 158, 1, 0.322);
 }
 .purpleS {
     background-color: var(--purple);
 }
 .purple50 {
-    background-color: #7f47dd4a;
+    background-color: rgba(127, 71, 221, 0.29);
 }
 .greenS {
     background-color: var(--green);
 }
 .green50 {
-    background-color: #88A80D71;
+    background-color: rgba(136, 168, 13, 0.443);
 }
 .turquoiseS {
     background-color: var(--turquoise);
 }
 .turquoise50 {
-    background-color: #32c3d04b;
+    background-color: rgba(50, 195, 208, 0.294);
+}
+
+@media screen and (min-width: 60em) {
+    .page-template-archive-by-topic .site {
+    grid-template-columns: 1fr;
+    }
+    .page-template-archive-by-topic .cat-sqs, 
+    .page-template-archive-by-topic .articles-by-cat {
+        margin: 0 9em;
+    }
 }

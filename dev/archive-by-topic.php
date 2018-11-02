@@ -72,20 +72,24 @@ get_header(); ?>
 			if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 				<?php // create our link now that the post is setup ?>
-				
-				<div class="article show-description">
-					<h3 class="<?php echo $titleColor[$s] ?>"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
-					<?php 
-					if ($cat->term_id == 2) {
-						echo '<a href="' . get_the_permalink() . '">' . get_the_post_thumbnail() . '</a>';
+				<?php 
+					if ($cat->term_id == 2) { ?>
+						<h3 class="<?php echo $titleColor[$s] ?>"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3> 
+						<div class="archive-vid">
+						<?php echo '<a href="' . get_the_permalink() . '">' . get_the_post_thumbnail() . '</a>'; ?>
+						<a class="more-link" href="<?php the_permalink();?>"></a>
+						<?php echo '<p>' . get_the_excerpt() . '</p>'; ?>
+						</div> <?php
 					}
-					echo '<p>' . get_the_excerpt() . '</p>' ;
+					else {	?>				
 					
-					?>
-					<a class="more-link" href="<?php the_permalink();?>"></a>
-				</div>
-
-			<?php endwhile; endif; // done our wordpress loop. Will start again for each category 
+						<div class="article show-description">
+							<h3 class="<?php echo $titleColor[$s] ?>"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
+							<?php echo '<p>' . get_the_excerpt() . '</p>' ;?>
+							<a class="more-link" href="<?php the_permalink();?>"></a>
+						</div><?php
+					}
+			 endwhile; endif; // done our wordpress loop. Will start again for each category 
 			++$s;
 			if ( $s == 5 ) {
 				$s = 0; 

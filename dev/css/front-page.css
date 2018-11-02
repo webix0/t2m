@@ -1,7 +1,6 @@
 /**
  * Custom styles for the front-page.php template.
  */
-@import url(~sal.js/sal.css);
 .home .post-thumbnail img {
 	margin-bottom: 1em; }
 
@@ -47,7 +46,7 @@
 			margin-left: -9.2em;
 			width: 300px;
 			height: 279px;
-			background-image: url(//10.0.0.249:8080/t2m/wp-content/uploads/2018/08/T2M-Logo-300x270.png); }
+			background-image: url(/wp-content/uploads/2018/08/T2M-Logo-300x270.png); }
 	.cat-sqs {
 		grid-column: 2 / 3;
 		grid-row: 2 / 3; } }
